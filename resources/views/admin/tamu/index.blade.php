@@ -23,7 +23,7 @@
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
-                    @endif
+                        @endif
                         <div class="table-responsive">
                             <a href="{{ route('tamu.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                             <table class="table table-bordered" id="pelanggan" width="100%" cellspacing="0">

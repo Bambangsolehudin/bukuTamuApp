@@ -35,6 +35,17 @@ class frontController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nama' => 'required',
+            'no_ktp' => 'required|numeric',
+            'email' => 'required',
+            'umur' => 'required',
+            'jenis_kelamin' => 'required',
+            'alamat' => 'required',
+            'tujuan_kunjungan' => 'required',
+            'no_ktp' => 'required',
+            'foto' => 'required',
+        ]);
 
         $data = $request->all();
         $data['foto'] = $request->file('foto')->store(

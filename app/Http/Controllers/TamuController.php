@@ -44,9 +44,21 @@ class TamuController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nama' => 'required',
+            'no_ktp' => 'required|numeric',
+            'email' => 'required',
+            'umur' => 'required',
+            'jenis_kelamin' => 'required',
+            'alamat' => 'required',
+            'tujuan_kunjungan' => 'required',
+            'no_ktp' => 'required',
+            'foto' => 'required',
+        ]);
+
         $data = $request->all();
         Tamu::create($data);
-        // return redirect()->route('tamu.index');
+        return redirect()->route('tamu.index')->with('status', 'data tamu berhasil ditambahkan');
     }
 
     /**
@@ -82,11 +94,22 @@ class TamuController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'nama' => 'required',
+            'no_ktp' => 'required|numeric',
+            'email' => 'required',
+            'umur' => 'required',
+            'jenis_kelamin' => 'required',
+            'alamat' => 'required',
+            'tujuan_kunjungan' => 'required',
+            'no_ktp' => 'required',
+            'foto' => 'required',
+        ]);
 
         $data = $request->all();
         $tamu = Tamu::find($id);
         $tamu->update($data);
-        return redirect()->route('tamu.index');
+        return redirect()->route('tamu.index')->with('status', 'data tamu berhasil diUpdate');
     }
 
     /**
@@ -99,7 +122,7 @@ class TamuController extends Controller
     {
         $tamu = Tamu::find($id);
         $tamu->delete();
-        return redirect()->route('tamu.index');
+        return redirect()->route('tamu.index')->with('status', 'data tamu berhasil dihapus');
     }
 
     public function send($id)
@@ -114,7 +137,7 @@ class TamuController extends Controller
             }
         );
         // Alert::success('', 'Pendaftaran selesai');
-        return redirect()->route('tamu.index');
+        return redirect()->route('tamu.index')->with('status', 'data tamu berhasil dikirim');;
     }
 
     public function laporan()

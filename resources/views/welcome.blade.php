@@ -57,7 +57,7 @@
             {{-- <h1 class="h3 mb-0 text-gray-800">tamu</h1> --}}
           </div>
 
-          @if (count($errors) > 0)
+          {{-- @if (count($errors) > 0)
           <div class="alert alert-danger">
               <ul>
                   @foreach ($errors->all() as $error)
@@ -65,7 +65,7 @@
                   @endforeach
               </ul>
           </div>
-          @endif
+          @endif --}}
           <!-- Content Row -->
           <div class="row justify-content-center">
                 
@@ -77,6 +77,16 @@
                 </div>
                 
                 <div class="col-5 mt-3">
+                    
+                @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                  
                     <form method="POST" action="{{ route('front.store') }}" enctype="multipart/form-data">
                         @csrf
