@@ -24,8 +24,8 @@ class CreateTamusTable extends Migration
             $table->string("tujuan_kunjungan");
             $table->string("foto");
             $table->string("status");
-            $table->time("jam");
-            $table->date("tanggal");
+            $table->time("jam")->nullable();
+            $table->date("tanggal")->nullable();
             $table->timestamps();
         });
     }
