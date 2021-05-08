@@ -24,10 +24,14 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('laporan') }}">
-          <i class="fas fa-fw fa-images"></i>
+          <i class="fas fa-fw fa-print"></i>
           <span>Laporan</span></a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.index') }}">
+          <i class="fas fa-fw fa-user"></i>
+          <span>User</span></a>
+      </li>
       
 
 

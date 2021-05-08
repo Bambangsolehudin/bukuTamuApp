@@ -24,6 +24,8 @@ Route::post('/laporan', 'TamuController@createlaporan')->name('laporan.create');
 
 Route::resource('tamu', 'TamuController');
 Route::resource('front', 'frontController');
+Route::resource('user', 'UserController');
+
 
 
 Auth::routes();

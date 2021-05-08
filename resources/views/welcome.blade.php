@@ -26,7 +26,7 @@
 
 </head>
 <body class="bg-dark ">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="#">App <span class="text-primary">BukuTamu</span> </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,19 +37,19 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              {{-- <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
-              </li> --}}
-              {{-- <li class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> --}}
+              </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> --}}
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
         </div>
